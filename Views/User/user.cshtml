@@ -1,0 +1,794 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="~/css/simple-sidebar.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['orgchart']}]}"></script>
+
+    <link href="../css/acount-form.css" rel="stylesheet" />
+    <link href="../css/style-form.css" rel="stylesheet" />
+    <style>
+        /* USER PROFILE PAGE */
+        .card {
+            padding: 30px;
+            background-color: rgba(214, 224, 226, 0.2);
+            -webkit-border-top-left-radius: 5px;
+            -moz-border-top-left-radius: 5px;
+            border-top-left-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-top-right-radius: 5px;
+            border-top-right-radius: 5px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+            .card.hovercard {
+                position: relative;
+                padding-top: 0;
+                overflow: hidden;
+                text-align: center;
+                background-color: #fff;
+                background-color: rgba(255, 255, 255, 1);
+            }
+
+                .card.hovercard .card-background {
+                    height: 130px;
+                }
+
+        .card-background img {
+            -webkit-filter: blur(25px);
+            -moz-filter: blur(25px);
+            -o-filter: blur(25px);
+            -ms-filter: blur(25px);
+            filter: blur(25px);
+            margin-left: -100px;
+            margin-top: -200px;
+            min-width: 130%;
+        }
+
+        .card.hovercard .useravatar {
+            position: absolute;
+            top: 15px;
+            left: 0;
+            right: 0;
+        }
+
+            .card.hovercard .useravatar img {
+                width: 100px;
+                height: 100px;
+                max-width: 100px;
+                max-height: 100px;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                border-radius: 50%;
+                border: 5px solid rgba(255, 255, 255, 0.5);
+            }
+
+        .card.hovercard .card-info {
+            position: absolute;
+            bottom: 14px;
+            left: 0;
+            right: 0;
+        }
+
+            .card.hovercard .card-info .card-title {
+                padding: 0 5px;
+                font-size: 20px;
+                line-height: 1;
+                color: #262626;
+                background-color: rgba(255, 255, 255, 0.1);
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                border-radius: 4px;
+            }
+
+        .card.hovercard .card-info {
+            overflow: hidden;
+            font-size: 12px;
+            line-height: 20px;
+            color: #737373;
+            text-overflow: ellipsis;
+        }
+
+        .card.hovercard .bottom {
+            padding: 0 20px;
+            margin-bottom: 17px;
+        }
+
+        .btn-pref .btn {
+            -webkit-border-radius: 0 !important;
+        }
+
+
+        
+    </style>
+
+
+
+
+
+
+
+
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        STATISTICS
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Total Partners<span class="label label-warning">5</span></a>
+                </li>
+                <li>
+                    <a href="#">Next Upgrade<span class="label label-warning">Available</span></a>
+                </li>
+                <li>
+                    <a href="#">Pending Bonus<span class="label label-warning">0</span></a>
+                </li>
+                <li>
+                    <a href="#">Missed Bonus<span class="label label-warning">0</span></a>
+                </li>
+                <li>
+                    <a href="#">Bonus Level#1</a>
+                </li>
+                <li>
+                    <a href="#">Bonus Level#2</a>
+                </li>
+                <li>
+                    <a href="#">Bonus Level#3</a>
+                </li>
+                <li>
+                    <a href="#">Bonus Level#4</a>
+                </li>
+                <li>
+                    <a href="#">Bonus Level#5</a>
+                </li>
+                <li>
+                    <a href="#">Bonus Level#6</a>
+                </li>
+                <li>
+                    <a href="#">Bonus Level#7</a>
+                </li>
+                <li>
+                    <a href="#">Bonus Level#8</a>
+                </li>
+                <li>
+                    <a href="#">Bonus Level#9</a>
+                </li>
+                <li>
+                    <a href="#">Bonus Level#10</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card hovercard">
+                            <div class="card-background">
+                                <img class="card-bkimg" alt="" src="http://lorempixel.com/100/100/people/9/">
+
+                            </div>
+                            <div class="useravatar">
+                                <img alt="" src="http://lorempixel.com/100/100/people/9/">
+                            </div>
+                            <div class="card-info">
+                                <span class="card-title">BbossLady</span>
+
+                            </div>
+                        </div>
+                        <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
+
+                            <div class="btn-group" role="group">
+                                <button type="button" id="favorites" class="btn btn-default" href="#tab2" data-toggle="tab">
+                                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                    <div class="hidden-xs">Member</div>
+                                </button>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button type="button" id="following" class="btn btn-default" href="#tab3" data-toggle="tab">
+                                    <span class="glyphicon glyphicon-gift" aria-hidden="true"></span>
+                                    <div class="hidden-xs">Followers Chart</div>
+                                </button>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button type="button" id="following" class="btn btn-default" href="#tab4" data-toggle="tab">
+                                    <span class="glyphicon glyphicon-plane" aria-hidden="true"></span>
+                                    <div class="hidden-xs">Progression</div>
+                                </button>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button type="button" id="following" class="btn btn-default" href="#tab5" data-toggle="tab">
+                                    <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
+                                    <div class="hidden-xs">Investments</div>
+                                </button>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button type="button" id="following" class="btn btn-default" href="#tab6" data-toggle="tab">
+                                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                    <div class="hidden-xs">Bonus</div>
+                                </button>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button type="button" id="following" class="btn btn-default" href="#tab7" data-toggle="tab">
+                                    <span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
+                                    <div class="hidden-xs">Payments</div>
+                                </button>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button type="button" id="following" class="btn btn-default" href="#tab8" data-toggle="tab">
+                                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                    <div class="hidden-xs">Edit Account</div>
+                                </button>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button type="button" id="following" class="btn btn-default" href="#tab9" data-toggle="tab">
+                                    <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+                                    <div class="hidden-xs">Password</div>
+                                </button>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button type="submit" class="btn btn-default" onclick="location.href='../../'">
+                                    <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                                    <div class="hidden-xs">Logout</div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="well">
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="tab1">
+                                    <h3></h3>
+                                </div>
+                                <div class="tab-pane fade in" id="tab2">
+                                    <div class="bs-example">
+                                        <ul class="nav nav-tabs" id="myTab">
+                                            <li class="active"><a href="#sectionA">Members List</a></li>
+                                            <li><a href="#sectionB">Positions And Levels</a></li>
+                                            <li><a href="#sectionC">Overflows</a></li>
+                                            <li><a href="#sectionD">Search Member</a></li>
+                                            
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div id="sectionA" class="tab-pane fade in active">
+                                                <h3>List of Members</h3>
+                                                <table class="table table-striped">
+                                                    <tr>
+                                                        <th>Team Id</th>
+                                                        <th>Team Name</th>
+                                                        <th>Win</th>
+                                                        <th>Lose</th>
+                                                        <th>Tie</th>
+                                                        <th>Points</th>
+
+                                                    </tr>
+
+
+
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Real Madrid</td>
+                                                        <td>3</td>
+                                                        <td>1</td>
+                                                        <td>0</td>
+                                                        <td>8</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Barcelona</td>
+                                                        <td>2</td>
+                                                        <td>1</td>
+                                                        <td>1</td>
+                                                        <td>5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>Chelsea</td>
+                                                        <td>2</td>
+                                                        <td>2</td>
+                                                        <td>0</td>
+                                                        <td>4</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div id="sectionB" class="tab-pane fade">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <h3>Positions</h3>
+                                                        <table class="table table-striped">
+                                                            <tr>
+                                                                <th>Team Id</th>
+                                                                <th>Team Name</th>
+                                                                <th>Win</th>
+                                                                <th>Lose</th>
+                                                                <th>Tie</th>
+                                                                <th>Points</th>
+
+                                                            </tr>
+
+
+
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>Real Madrid</td>
+                                                                <td>3</td>
+                                                                <td>1</td>
+                                                                <td>0</td>
+                                                                <td>8</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>Barcelona</td>
+                                                                <td>2</td>
+                                                                <td>1</td>
+                                                                <td>1</td>
+                                                                <td>5</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>4</td>
+                                                                <td>Chelsea</td>
+                                                                <td>2</td>
+                                                                <td>2</td>
+                                                                <td>0</td>
+                                                                <td>4</td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <h3>Levels</h3>
+                                                        <table class="table table-striped">
+                                                            <tr>
+                                                                <th>Team Id</th>
+                                                                <th>Team Name</th>
+                                                                <th>Win</th>
+                                                                <th>Lose</th>
+                                                                <th>Tie</th>
+                                                                <th>Points</th>
+
+                                                            </tr>
+
+
+
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>Real Madrid</td>
+                                                                <td>3</td>
+                                                                <td>1</td>
+                                                                <td>0</td>
+                                                                <td>8</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>Barcelona</td>
+                                                                <td>2</td>
+                                                                <td>1</td>
+                                                                <td>1</td>
+                                                                <td>5</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>4</td>
+                                                                <td>Chelsea</td>
+                                                                <td>2</td>
+                                                                <td>2</td>
+                                                                <td>0</td>
+                                                                <td>4</td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div id="sectionC" class="tab-pane fade">
+                                                <h2>Overflows</h2><br/>
+                                                <p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
+
+                                            </div>
+
+                                            <div id="sectionD" class="tab-pane fade">
+                                                <div class="row">
+                                                    <div class="col-lg-3"></div>
+                                                    <div class="col-lg-6">
+                                                        <br/>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="Username of Member...">
+                                                            <span class="input-group-btn">
+                                                                <button class="btn btn-default" type="button">Search!</button>
+                                                            </span>
+                                                        </div><!-- /input-group -->
+                                                        <br/><br/>
+                                                    </div>
+                                                    <div class="col-lg-3"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="tab-pane fade in" id="tab3">
+                                    <h3>Organizational Chart</h3>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div id="chart_div"></div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                <div class="tab-pane fade in" id="tab4">
+                                    <h3>Progress</h3>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>Team Id</th>
+                                            <th>Team Name</th>
+                                            <th>Win</th>
+                                            <th>Lose</th>
+                                            <th>Tie</th>
+                                            <th>Points</th>
+
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Real Madrid</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Barcelona</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Chelsea</td>
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>0</td>
+                                            <td>4</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="tab-pane fade in" id="tab5">
+                                    <h3>Investments</h3>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>Team Id</th>
+                                            <th>Team Name</th>
+                                            <th>Win</th>
+                                            <th>Lose</th>
+                                            <th>Tie</th>
+                                            <th>Points</th>
+
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Real Madrid</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Barcelona</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Chelsea</td>
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>0</td>
+                                            <td>4</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="tab-pane fade in" id="tab6">
+                                    <h3>Bonus</h3>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>Team Id</th>
+                                            <th>Team Name</th>
+                                            <th>Win</th>
+                                            <th>Lose</th>
+                                            <th>Tie</th>
+                                            <th>Points</th>
+
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Real Madrid</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Barcelona</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Chelsea</td>
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>0</td>
+                                            <td>4</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="tab-pane fade in" id="tab7">
+                                    <h3>Payments</h3>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>Team Id</th>
+                                            <th>Team Name</th>
+                                            <th>Win</th>
+                                            <th>Lose</th>
+                                            <th>Tie</th>
+                                            <th>Points</th>
+
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Real Madrid</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Barcelona</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Chelsea</td>
+                                            <td>2</td>
+                                            <td>2</td>
+                                            <td>0</td>
+                                            <td>4</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="tab-pane fade in" id="tab8">
+                                    <h3>Account Information</h3>
+                                    <div class="top-content">
+
+                                        <div class="inner-bg">
+                                            <div class="container">
+                                                
+                                                <div class="row">
+                                                   
+                                                    <div class="col-sm-8 form-box">
+                                                        <div class="form-top">
+                                                            <div class="form-top-left">
+                                                                <h3>Edit Personal Information</h3>
+                                                                <p>Fill in the form </p>
+                                                            </div>
+                                                            <div class="form-top-right">
+                                                                <i class="fa fa-pencil"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-bottom">
+                                                            <form role="form" action="" method="post" class="registration-form">
+                                                                <div class="form-group">
+                                                                    <label class="sr-only" for="form-first-name">First name</label>
+                                                                    <input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="sr-only" for="form-last-name">Last name</label>
+                                                                    <input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="sr-only" for="form-last-name">Mobile No</label>
+                                                                    <input type="tel" name="form-last-name" placeholder="Mobile No..." class="form-last-name form-control" id="form-mob-num">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="sr-only" for="form-last-name">City</label>
+                                                                    <input type="text" name="form-last-name" placeholder="City..." class="form-last-name form-control" id="form-city">
+                                                                </div>
+
+                                                                <div class="form-group">
+                                                                    <label class="sr-only" for="form-last-name">Country</label>
+                                                                    <input type="text" name="form-last-name" placeholder="Country..." class="form-last-name form-control" id="form-country">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="sr-only" for="form-last-name">Gender</label>
+                                                                    
+                                                                    <select class="form-last-name form-control">
+                                                                        
+                                                                        <option value="Male">Male</option>
+                                                                        <option value="Female">Female</option>
+                                                                        <option value="Other">Other</option>
+
+
+                                                                    </select>
+                                                                </div>
+
+                                                                    <div class="form-group">
+                                                                        <label class="sr-only" for="form-email">Email</label>
+                                                                        <input type="email" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
+                                                                    </div>
+                                                                    <button type="submit" class="btn">Update Info</button>
+</form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade in" id="tab9">
+                                    <h3>Change Password</h3>
+                                    <div class="top-content">
+
+                                        <div class="inner-bg">
+                                            <div class="container">
+
+                                                <div class="row">
+
+                                                    <div class="col-sm-8 form-box">
+                                                        <div class="form-top">
+                                                            <div class="form-top-left">
+                                                                <h3>Change Password</h3>
+                                                                <p>Fill in the form </p>
+                                                            </div>
+                                                            <div class="form-top-right">
+                                                                <i class="fa fa-pencil"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-bottom">
+                                                            <form role="form" action="" method="post" class="registration-form">
+                                                                <div class="form-group">
+                                                                    <label class="sr-only" for="form-first-name">Username</label>
+                                                                    <input type="text" name="form-first-name" placeholder="Username..." class="form-first-name form-control" id="form-username">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="sr-only" for="form-last-name">Current Password</label>
+                                                                    <input type="password" name="form-last-name" placeholder="Current Password..." class="form-last-name form-control" id="form-cPassword">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="sr-only" for="form-last-name">New Password</label>
+                                                                    <input type="password" name="form-last-name" placeholder="New Password..." class="form-last-name form-control" id="form-nPassword">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="sr-only" for="form-last-name">Confirm Password</label>
+                                                                    <input type="password" name="form-last-name" placeholder="Confirm Password..." class="form-last-name form-control" id="form-conPassword">
+                                                                </div>
+
+                                                                <button type="submit" class="btn">Change Password</button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h2>Welcome to the User Profile</h2>
+                        <h4>All the information of this user.....</h4>
+                        <a href="#menu-toggle" class="btn btn-primary" id="menu-toggle">Toggle Menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="~/js/retina.js"></script>
+    <script src="~/js/strectch.js"></script>
+    <script src="~/js/original.js"></script>
+    <!-- Menu Toggle Script -->
+    <script>
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Name');
+            data.addColumn('string', 'Manager');
+            data.addColumn('string', 'ToolTip');
+
+            data.addRows([
+              [{ v: 'Mike', f: 'Mike<div style="color:red; font-style:italic">President</div>' }, '', 'The President'],
+              [{ v: 'Jim', f: 'Jim<div style="color:red; font-style:italic">Vice President</div>' }, 'Mike', 'VP'],
+              ['Alice', 'Mike', ''],
+              ['Bob', 'Mike', ''],
+              ['Carol', 'Bob', ''],
+                ['Moiz', 'Bob', ''],
+                ['djhfjkd', 'Alice', ''],
+                ['bbosslady', 'Alice', ''],
+                ['hbhkk', 'Alice', ''],
+                ['jsjdk', 'Bob', ''],
+                ['awqer', 'Jim', ''],
+                ['kfjfkmrn', 'Jim', ''],
+                ['mniyt', 'Jim', '']
+            ]);
+
+            var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+            chart.draw(data, { allowHtml: true });
+        }
+    </script>
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+    <script>
+
+        $(document).ready(function () {
+            $(".btn-pref .btn").click(function () {
+                $(".btn-pref .btn").removeClass("btn-primary").addClass("btn-default");
+                // $(".tab").addClass("active"); // instead of this do the below
+                $(this).removeClass("btn-default").addClass("btn-primary");
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#myTab a").click(function (e) {
+                e.preventDefault();
+                $(this).tab('show');
+            });
+        });
+    </script>
+</body>
+</html>
