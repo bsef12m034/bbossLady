@@ -52,7 +52,7 @@ p {
 }
 
 .bg-primary {
-    background-color: #f05f40;
+    background-color: #3e557a;
 }
 
 .bg-dark {
@@ -112,7 +112,7 @@ aside {
 
 .navbar-default .nav > li.active>a,
 .navbar-default .nav>li.active>a:focus {
-    color: #f05f40!important;
+    color: black!important;
     background-color: transparent;
 }
 
@@ -178,7 +178,7 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(../img/header.jpg);
+    background-image: url(../img/3rd.jpg);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -385,9 +385,9 @@ fieldset[disabled] .btn-default.active {
 }
 
 .btn-primary {
-    border-color: #f05f40;
+    border-color: #3e557a;
     color: #fff;
-    background-color: #f05f40;
+    background-color: #3e557a;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
