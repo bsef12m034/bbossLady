@@ -230,6 +230,19 @@
 
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
+	
+	if (response.status === 'connected') {
+   
+    var uid = response.authResponse.userID;
+    var accessToken = response.authResponse.accessToken;
+	alert("abc");
+	alert(accessToken);
+  } else if (response.status === 'not_authorized') {
+   
+  } else {
+   
+  }
+	
   });
 
   };
