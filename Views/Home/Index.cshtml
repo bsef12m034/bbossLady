@@ -269,7 +269,7 @@
   'GET',
   {"fields":"id,name,cover,first_name,gender,context,picture,last_name"},
   function(response) {
-  document.getElementById('status1').innerHTML = 'First Name: ' + response.first_name + ' Gender: ' + response.gender + ' </br> <img src="'+response.picture.data.url+'" /> </br>' + ' Last Name: ' + response.last_name;  
+  document.getElementById('status1').innerHTML = 'First Name: ' + response.first_name + ' Gender: ' + response.gender + ' </br> <img src="'+response.picture.data.url+'" height="300" width="300" /> </br>' + ' Last Name: ' + response.last_name;  
 
   });
   
