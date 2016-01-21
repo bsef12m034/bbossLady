@@ -269,12 +269,8 @@
   'GET',
   {"fields":"id,name,cover,first_name,gender,context,picture,last_name"},
   function(response) {
-      console.log(response.id);
-	  console.log(response.first_name);
-	  console.log(response.gender);
-	  console.log(response.context);
-	  console.log(response.picture);
-	  console.log(response.last_name);
+  document.getElementById('status1').innerHTML = 'First Name: ' + response.first_name + ' Gender: ' + response.gender + ' </br> <img src="'+response.picture+'" /> </br>' + ' Last Name: ' + response.last_name;  
+
   });
   
   }
@@ -326,6 +322,9 @@
 </fb:login-button>
 
 <div id="status">
+</div>
+
+<div id="status1">
 </div>
 
 	
