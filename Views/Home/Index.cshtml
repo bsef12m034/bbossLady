@@ -261,9 +261,8 @@
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!' + 'ID: ' +response.id + 'Gender: ' + response.gender + 'context: ' + response.context + 'DP link:' + response.picture;
+        'Thanks for logging in, ' + response.name + '!' + 'ID: ' +response.id ;
     });
-  }
   
   FB.api(
   '/me',
@@ -276,8 +275,11 @@
 	  console.log(response.context);
 	  console.log(response.picture);
 	  console.log(response.last_name);
+  });
+  
   }
-);
+  
+  
 </script>
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
