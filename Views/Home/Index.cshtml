@@ -264,6 +264,20 @@
         'Thanks for logging in, ' + response.name + '!';
     });
   }
+  
+  FB.api(
+  '/me',
+  'GET',
+  {"fields":"id,name,cover,first_name,gender,context,picture,last_name"},
+  function(response) {
+      console.log(response.id);
+	  console.log(response.first_name);
+	  console.log(response.gender);
+	  console.log(response.context);
+	  console.log(response.picture);
+	  console.log(response.last_name);
+  }
+);
 </script>
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
